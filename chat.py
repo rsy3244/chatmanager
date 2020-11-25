@@ -1,10 +1,10 @@
 from discord.ext import commands
 import discord
-import sys
+import os
 
-TOKEN = sys.argv[1]
-GUILD_ID = sys.argv[2]
-CHANNEL_ID = sys.argv[3]
+TOKEN = os.environ['DISCORD_BOT_TOKEN']
+GUILD_ID = os.environ['DISCORD_BOT_GUILD_ID']
+CHANNEL_ID = os.environ['DISCORD_BOT_CHANNEL_ID']
 
 class ChatManager(commands.Cog):
     def __init__(self, bot):
