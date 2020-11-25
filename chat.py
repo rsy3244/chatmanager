@@ -26,7 +26,8 @@ class ChatManager(commands.Cog):
         if message.channel == self.chat_channel:
             print("delete message:")
             print(message)
-            await message.delete(delay=5)
+            #遅延時間を設定できるようにする
+            await message.delete(delay=7200)
             print("{} deleted".format(message.id))
 
 
