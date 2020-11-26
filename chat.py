@@ -14,8 +14,8 @@ class ChatManager(commands.Cog):
     @commands.Cog.listener()
     async def on_ready(self):
         print("ready")
-        guild = self.bot.get_guild(554668279541792794)
-        self.chat_channel = guild.get_channel(770572504980389889)
+        guild = self.bot.get_guild(GUILD_ID)
+        self.chat_channel = guild.get_channel(CHANNEL_ID)
         print("""guild name: {}
         channel_name: {}""".format(guild.name, self.chat_channel.name))
 
