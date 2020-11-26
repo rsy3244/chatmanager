@@ -3,8 +3,8 @@ import discord
 import os
 
 TOKEN = os.environ['DISCORD_BOT_TOKEN']
-GUILD_ID = os.environ['DISCORD_BOT_GUILD_ID']
-CHANNEL_ID = os.environ['DISCORD_BOT_CHANNEL_ID']
+GUILD_ID = int(os.environ['DISCORD_BOT_GUILD_ID'])
+CHANNEL_ID = int(os.environ['DISCORD_BOT_CHANNEL_ID'])
 
 class ChatManager(commands.Cog):
     def __init__(self, bot):
@@ -17,7 +17,7 @@ class ChatManager(commands.Cog):
         guild = self.bot.get_guild(GUILD_ID)
         self.chat_channel = guild.get_channel(CHANNEL_ID)
         print("""guild name: {}
-        channel_name: {}""".format(guild.name, self.chat_channel.name))
+channel_name: {}""".format(guild, self.chat_channel))
 
     @commands.Cog.listener()
     async def on_message(self, message):
