@@ -34,4 +34,4 @@ channel_name: {}""".format(guild, self.chat_channel))
 bot = commands.Bot(command_prefix='!')
 bot.add_cog(ChatManager(bot))
 
-bot.run("MzM3MjM2OTAwMTEwNjYzNjgw.WW9qVg.FlX69k3sT-tgze_iVHf2LgCpqFg")
+bot.run(TOKEN)
