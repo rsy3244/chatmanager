@@ -36,7 +36,8 @@ channel_name: {}""".format(guild, self.chat_channel))
             print(message)
             #遅延時間を設定できるようにする
             print("timeleft: {}".format(self.lifetime.total_seconds()))
-            await message.delete(delay=self.lifetime.total_seconds())
+            await asyncio.sleep(self.lifetime.total_seconds())
+            await message.delete()
             print("{} deleted".format(message.id))
 
 
