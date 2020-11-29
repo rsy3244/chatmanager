@@ -47,7 +47,7 @@ channel_name: {}""".format(guild, self.chat_channel))
             print("{}: {} sec".format(message.id, life_time.total_seconds()))
             if life_time > timedelta(0):
                 await asyncio.sleep(life_time.total_seconds())
-            message.delete()
+            await message.delete()
 
     @commands.Cog.listener()
     async def on_message(self, message):
